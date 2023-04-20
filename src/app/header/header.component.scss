@@ -1,0 +1,88 @@
+.header {
+    background-color: cadetblue;
+    height: 50px;
+
+    .menu-btn {
+        font-size: large;
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        
+        &:hover {
+            background-color: gray;
+            cursor: pointer;
+        }
+
+
+    }
+
+    .login-btn {
+        position:absolute;
+        right: 50px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: darkcyan;
+
+        &:hover {
+            background-color: lightslategray;
+            cursor: pointer;
+        }
+    }
+
+    .notification-btn {
+        position: absolute;
+            right: 100px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: darkcyan;
+        
+            &:hover {
+                background-color: lightslategray;
+                cursor: pointer;
+            }
+    }
+
+    .logo-text {
+        font-size: large;
+        font-weight: bold;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+}
+
+nav {
+    background-color: cadetblue;
+    width: 250px;
+    height: calc(100vh - 50px);
+
+    .user {
+        padding: 50px 0 10px 0;
+        .user-image {
+            width: 120px;
+            border-radius: 50%;
+        }
+    }
+
+
+    .nav-list {
+
+        .nav-list-items {
+            margin: 0;
+            padding-left: 30px;
+            font-size: large;
+            height: 50px;
+
+            &:hover {
+                background-color: darkcyan;
+                cursor: pointer;
+            }
+        }
+
+        .nav-list-items i {
+            margin-right: 10px;
+        }
+
+    }
+}
+
