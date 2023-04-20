@@ -23,6 +23,23 @@
             width: 80px;
             height: 40px;
             border-radius: 5px;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &-disabled {
+                background-color: darkgrey;
+                color: azure;
+                border: none;
+                width: 80px;
+                height: 40px;
+                border-radius: 5px;
+
+                &:hover {
+                    cursor: not-allowed;
+                }
+            }
         }
     }
 
