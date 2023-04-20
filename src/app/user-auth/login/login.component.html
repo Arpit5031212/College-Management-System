@@ -1,0 +1,8 @@
+<div class="loginDiv d-flex flex-column align-items-center justify-content-center">
+    <h2 class="m-4 heading">Login</h2>
+    <form [formGroup]="loginForm" class="login" (ngSubmit)="onSubmit(loginForm)">
+        <input formControlName="userEmail" class="form-control m-5 input-box" type="email" placeholder="User Email" required>
+        <input formControlName="password" class="form-control m-5 input-box" type="password" placeholder="Password" required>
+        <button class="m-5 login-btn" type="submit">Log In</button>
+    </form>
+</div>

@@ -1,0 +1,30 @@
+.loginDiv {
+    height: 100vh;
+    background: linear-gradient(to right, #355c7d, #6c5b7b, #c06c84);
+
+    .heading {
+        text-decoration: underline;
+    }
+
+    .login {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        height: 400px;
+        width: 500px;
+        background: linear-gradient(to left, #355c7d, #6c5b7b, #c06c84);
+        
+        .input-box {
+            width: 400px;
+        }
+
+        .login-btn {
+            background-color: #575b7c;
+            color: azure;
+            border: none;
+            width: 80px;
+            height: 40px;
+            border-radius: 5px;
+        }
+    }
+
+
+}
