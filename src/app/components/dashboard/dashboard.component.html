@@ -1,0 +1,52 @@
+<header class="d-flex justify-content-between align-items-center bg-secondary">
+    <div class="mx-3">
+        College Management System
+    </div>
+    <button class="logOut-btn btn"><i class="fa-solid fa-user"></i></button>
+</header>
+
+<div *ngIf=true>
+
+    <div class="d-flex flex-column align-items-center">
+
+
+        <div class="container-fluid d-flex justify-content-center action-container">
+            <div class="add-user action-divs">
+                <h5>Register User:</h5>
+                <br>
+                <button class="btn btn-primary">Add Student</button>
+                <button class="btn btn-primary">Add Teacher</button>
+            </div>
+
+            <div class="update-user action-divs">
+                <h5>Update User:</h5>
+                <br>
+
+                <button class="btn btn-warning">Update Student</button>
+                <button class="btn btn-warning">Update Teacher</button>
+            </div>
+
+            <div class="delete-user action-divs">
+                <h5>Delete User:</h5>
+                <br>
+                <button class="btn btn-danger">Delete Student</button>
+                <button class="btn btn-danger">Delete Teacher</button>
+            </div>
+        </div>
+
+        <div class="get-user m-5">
+            <!-- get students -->
+            Button
+            
+
+        </div>
+    </div>
+</div>
+
+<div *ngIf="isTeacher()">
+
+</div>
+
+<div *ngIf="isStudent()">
+
+</div>

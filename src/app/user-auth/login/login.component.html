@@ -1,9 +1,9 @@
 <div class="loginDiv d-flex flex-column align-items-center justify-content-center">
     <h2 class="m-4 heading">Login</h2>
-    <form [formGroup]="loginForm" class="login" (ngSubmit)="onSubmit(loginForm)">
-        <input formControlName="userEmail" class="form-control m-5 input-box" type="email" placeholder="User Email">
+    <form [formGroup]="loginForm" class="login" (ngSubmit)="onLogin()">
+        <input formControlName="username" class="form-control m-5 input-box" type="email" placeholder="Username">
         
         <input formControlName="password" class="form-control m-5 input-box" type="password" placeholder="Password">
-        <button class="m-5 login-btn" [class.login-btn-disabled]="loginForm.invalid" type="submit" [disabled]="loginForm.invalid">Log In</button>
+        <button class="m-5 login-btn btn btn-primary" [class.login-btn-disabled]="loginForm.invalid" type="submit" formmethod="post" [disabled]="loginForm.invalid">Log In</button>
     </form>
 </div>

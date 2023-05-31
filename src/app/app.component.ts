@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataShareService } from './services/data-share.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'College_Management_System';
+  
+  
+  constructor(private dataShareService: DataShareService) { }
+
 }

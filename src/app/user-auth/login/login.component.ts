@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
+import { DataShareService } from 'src/app/services/data-share.service';
 
 @Component({
   selector: 'app-login',
@@ -9,18 +11,30 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
 
   loginForm !: FormGroup;
-  //passwordRegex: string = "^ (?=.* [a - z])(?=.* [A - Z])(?=.* [0 - 9])(?=.* [!@#$ %^&* _=+-]).{ 8, 12 }$";
-  
-  
+  public loginSuccess: boolean = false;
+
+  constructor(private auth: AuthService, private dataShareService: DataShareService) { }
+
   ngOnInit() {
     this.loginForm = new FormGroup({
-      userEmail: new FormControl('', [Validators.required, Validators.email]),
-      password: new FormControl('', [Validators.required, Validators.minLength(8)]),
+      username: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [Validators.required]),
     });
   }
 
-  onSubmit(form: FormGroup) {
-    console.log(form.value);
+  onLogin(): void {
+    if (this.loginForm.valid) {
+      console.log(this.loginForm.value);
+      this.auth.login(this.loginForm.value).subscribe({
+        next: (res) => {
+          this.loginSuccess = true;
+          alert(res.message)
+        },
+        error: (err) => {
+          alert(err?.error.message)
+        }
+      })
+    }
   }
 
 }
